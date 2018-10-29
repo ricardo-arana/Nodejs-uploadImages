@@ -1,0 +1,12 @@
+extends ./layout.jade
+block contenido
+	div(class="col-md-6 remove-float center-block text-center big-top-space")
+		form(action="/sessions", method="POST", enctype="multipart/form-data")
+			div(class="form-group")
+				label(for="email") Email
+				input(type="text", name="email",placeholder="Email", id="email", class="form-control")
+			div(class="form-group")
+				label(for="passwod") password
+				input(type="password",name="password",id="password",class="form-control")
+			div(class="form-group")
+				input(type="submit", value="Iniciar Session", class="btn-info")

@@ -1,0 +1,17 @@
+extends ./layout.jade
+block contenido
+	form(action="/users", method="POST", enctype="multipart/form-data")
+		div(class="form-group")
+			label(for="email") Email
+			input(type="text", name="email",placeholder="Email", id="email", class="form-control")
+		div(class="form-group")
+			label(for="username") Username
+			input(type="text", name="username",placeholder="username", id="username", class="form-control")
+		div(class="form-group")
+			label(for="passwod") password
+			input(type="password",name="password",id="password",class="form-control")
+		div(class="form-group")
+			label(for="password_confirmation") password_confirmation
+			input(type="password",name="password_confirmation",id="password_confirmation",class="form-control")
+		div(class="form-group")
+			input(type="submit", value="Iniciar Session", class="btn-info")

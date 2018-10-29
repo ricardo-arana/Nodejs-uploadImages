@@ -1,0 +1,11 @@
+extends ../../layout.jade
+block contenido
+	div(class="col-md-6 remove-float center-block text-center big-top-space")
+		h1 Editar imagenes
+		form(action="/app/imagenes/#{imagen._id}?_method=PUT", method="POST", enctype="multipart/form-data")
+			input(type="hidden", value="PUT", name="_method")
+			div(class="form-group")
+				label(for="title") titulo
+				input(type="text", name="title",placeholder="title", id="title", class="form-control", value="#{imagen.title}")
+			div(class="form-group")
+				input(type="submit", value="guardar", class="btn-info")
